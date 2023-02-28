@@ -35,10 +35,3 @@ Route::get('/dinamico', function () {
     'array' => $array]);
 });
 
-Route::get('produto/{id}', function ($id) {
-    return view('product', ['id' => $id]);
-});
-
-Route::get('parametro_opcional/{id?}', function ($id = null){ //É necessário passar um valor default em parametros opcionais
-    return view('product', ['id' => $id]);
-});
