@@ -127,6 +127,25 @@ header{
     color: #757575;
 }
 
+/*Event*/
+#event-create-container{
+    padding: 30px;
+    font-size: 16px;
+}
+
+#event-create-container label{
+    font-weight: bold;
+}
+
+#event-create-container .form-group{
+    margin-bottom: 25px;
+}
+
+#event-create-container input,
+#event-create-container textarea,
+#event-create-container select{
+    font-size: 14px;
+}
 
 /*footer*/
 
