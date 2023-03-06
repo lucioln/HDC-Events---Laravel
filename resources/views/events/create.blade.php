@@ -4,8 +4,14 @@
 
 <div id="event-create-container" class="col col-md-6 offset-md-3">
     <h1>Crie seu Evento</h1>
-    <form action="/events" method="post">
+    <form action="/events" method="post" enctype="multipart/form-data">
         @csrf
+
+        <div class="form-group">
+            <label for="image">Imagem do Evento:</label>
+            <input type="file" class="form-control-file " id="image" name="image" placeholder="Exemplo: Curso de Laravel">
+        </div>
+
         <div class="form-group">
             <label for="title">Titulo do Evento:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Exemplo: Curso de Laravel">
