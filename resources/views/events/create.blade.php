@@ -18,6 +18,11 @@
         </div>
 
         <div class="form-group">
+            <label for="date">Data do Evento:</label>
+            <input type="date" class="form-control" id="date" name="date">
+        </div>
+
+        <div class="form-group">
             <label for="description">Descrição:</label>
             <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no evento?"></textarea>
         </div>

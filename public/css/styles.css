@@ -112,7 +112,7 @@ header{
 
 .card .card-date{
     font-size: 12px;
-    color: #CCC;
+    color: #474747;
 }
 
 .card .card-title{
@@ -149,7 +149,8 @@ header{
 
 /*Event Page*/
 #image-container,
-#info-container{
+#info-container,
+#description-container{
     margin-top: 30px;
 }
 
