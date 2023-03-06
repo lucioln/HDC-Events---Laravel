@@ -28,6 +28,25 @@
         </div>
 
         <div class="form-group">
+            <label for="items">Itens de infraestrutura:</label>
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Palco"> Palco
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Open-food"> Open-food
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" name="items[]" value="Brindes"> Brindes
+            </div>
+        </div>
+
+        <div class="form-group">
             <label for="private">Evento Privado:</label>
             <select name="private" id="private" class="form-control">
                 <option value="0">Não</option>
