@@ -19,7 +19,7 @@ class EventController extends Controller
         }else{
             $events = Event::all();
         }
-        return view('home', ['events'=>$events, 'search'=> $search]);
+        return view('welcome', ['events'=>$events, 'search'=> $search]);
     }
 
     public function create(){
@@ -50,6 +50,10 @@ class EventController extends Controller
             $event->image = $imageName;
 
         }
+
+        $user = auth()->user();
+
+        $event->user_id = $user->id;
 
         $event->save();
 
