@@ -32,7 +32,7 @@
 
                         @auth
                             <li class="nav-item">
-                                <a href="/my-events" class="nav-link">Meus Eventos</a>
+                                <a href="/dashboard" class="nav-link">Meus Eventos</a>
                             </li>
 
                             <li class="nav-item">
