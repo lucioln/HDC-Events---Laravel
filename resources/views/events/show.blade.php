@@ -11,9 +11,26 @@
             <div id="info-container" class="col-md-6">
                 <h1>{{$event->title}}</h1>
                 <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{$event->city}}</p>
-                <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X Participantes</p>
+                <p class="events-participants"><ion-icon name="people-outline"></ion-icon>
+                    {{count($event->users)}}
+                    @if(count($event->users)>1)
+                        Participantes
+                    @else
+                        Participante
+                    @endif
+                    </p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{$event->user->name}}</p>
-                <a href="#" class="btn btn-primary" id="event-submit">Confirmar Presença</a>
+
+                <form action="/event/join/{{$event->id}}" method="POST">
+                    @csrf
+                    <a href="/event/join/{{$event->id}}"
+                        class="btn btn-primary"
+                        id="event-submit"
+                        onclick="event.preventDefault();
+                                this.closest('form').submit();"
+                        >Confirmar Presença</a>
+                </form>
+
                 <h3>O evento conta com:</h3>
                 <ul id="items-list">
                     @foreach ($event->items as $item)

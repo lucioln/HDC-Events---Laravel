@@ -208,6 +208,14 @@ header{
     display: inline-block;
 }
 
+/*Edit*/
+.img-preview{
+    width: 150px;
+    height: 150px;
+    margin: 20px 50px;;
+    border: 1px solid red;
+    border-radius: 10px;
+}
 
 /*footer*/
 
