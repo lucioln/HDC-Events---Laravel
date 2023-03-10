@@ -38,4 +38,6 @@ Route::get('/dinamico', function () {
 
 Route::post('event/join/{id}', [EventController::class, 'joinEvent'])->middleware('auth');
 
+Route::delete('event/leave/{id}', [EventController::class, 'leaveEvent'])->middleware('auth');
+
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');

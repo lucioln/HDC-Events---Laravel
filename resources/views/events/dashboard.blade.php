@@ -72,7 +72,17 @@
                             </a>
                         </td>
                         <td>{{ count($event->users)}}</td>
-                        <td><a href="#" class="btn btn-danger"> <ion-icon name="exit-outline"></ion-icon> Sair</a></td>
+                        <td>
+
+                            <form action="/event/leave/{{$event->id}}" method="POST" >
+                                @csrf
+                                @method("DELETE")
+                                <button type="submit" class="btn btn-danger">
+                                    <ion-icon name="exit-outline"></ion-icon> Sair
+                                </button>
+                            </form>
+
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

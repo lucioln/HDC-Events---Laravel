@@ -21,6 +21,7 @@
                     </p>
                 <p class="event-owner"><ion-icon name="star-outline"></ion-icon> {{$event->user->name}}</p>
 
+                @if(!$hasUserJoined)
                 <form action="/event/join/{{$event->id}}" method="POST">
                     @csrf
                     <a href="/event/join/{{$event->id}}"
@@ -30,6 +31,17 @@
                                 this.closest('form').submit();"
                         >Confirmar Presença</a>
                 </form>
+                @else
+                <form action="/event/leave/{{$event->id}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                        class="btn btn-danger"
+                        id="event-submit"
+                        >
+                       Sair do Evento</button>
+                </form>
+                @endif
 
                 <h3>O evento conta com:</h3>
                 <ul id="items-list">
