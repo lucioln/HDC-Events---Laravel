@@ -72,7 +72,11 @@ class EventController extends Controller
 
         $events = $user->events;
 
-        return view('events.dashboard', ['events' => $events]);
+        $eventsAsParticipant = $user->eventsAsParticipant;
+
+        return view('events.dashboard', [
+            'events' => $events,
+            'eventsasparticipant'=>$eventsAsParticipant ]);
     }
 
     public function destroy($id){
@@ -123,7 +127,7 @@ class EventController extends Controller
     public function joinEvent($id){
         $user = auth()->user();
 
-        $user->eventsAsParticipant()->attach($id);
+        $user->eventsAsParticipant->attach($id);
 
         $event = Event::findOrFail($id);
 
